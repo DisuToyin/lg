@@ -13,7 +13,7 @@
                 $query->where('tags', 'like', '%' . request('tag') . '%');
            }
            
-           if($filters['tag'] ?? false){ //if there is a tag do whats in this block
+           if($filters['search '] ?? false){ //if there is a tag do whats in this block
                 $query->where('title', 'like', '%' . request('search') . '%') -> orWhere('tags', 'like', '%' . request('search') . '%');
             }
         }
