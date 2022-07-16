@@ -8,6 +8,9 @@
     {
         use HasFactory;
 
+
+        // protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
+
         public function scopeFilter($query, array $filters){
            if($filters['tag'] ?? false){ //if there is a tag do whats in this block
                 $query->where('tags', 'like', '%' . request('tag') . '%');
